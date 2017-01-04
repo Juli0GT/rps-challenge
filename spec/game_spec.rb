@@ -32,7 +32,7 @@ describe Game do
 
     describe '#win?' do
       it 'returns true if player shape is scissors and opponent shape is paper' do
-        expect(win_turn.win?).to eq true
+        expect(win_game.win?).to eq true
       end
     end
   end

@@ -13,4 +13,14 @@ class Game
     @opponent_shape = game_options['opponent_shape']
   end
 
+  def win?
+    game_result == :win
+  end
+
+  private
+
+  def game_result
+    return if !@opponent_shape
+    GAME_RULES[@player_shape][@opponent_shape]
+  end
 end
