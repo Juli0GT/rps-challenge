@@ -21,6 +21,10 @@ class Game
     game_result == :lose
   end
 
+  def draw?
+    game_result == :draw
+  end
+
   private
 
   def game_result
