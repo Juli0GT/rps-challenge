@@ -5,10 +5,11 @@ class Game
     scissors: {rock: :lose, paper: :win, scissors: :draw}
   }
 
-  attr_reader :player_name
+  attr_reader :player_name, :player_shape
 
-  def initialize(player_name)
+  def initialize(player_name, player_shape)
     @player_name = player_name
+    @player_shape = player_shape
   end
 
 end

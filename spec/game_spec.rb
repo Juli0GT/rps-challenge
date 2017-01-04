@@ -1,7 +1,7 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(player_name) }
+  subject(:game) { described_class.new(player_name, player_shape) }
   let(:player_name) { 'Julio' }
   let(:player_shape) { 'scissors' }
 
