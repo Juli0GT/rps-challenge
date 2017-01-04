@@ -1,8 +1,8 @@
 require 'game'
 
 describe Game do
-  subject(:game) { desribed_class.new(options) }
-  let(:player_name) {'Julio'}
+  subject(:game) { described_class.new(player_name) }
+  let(:player_name) { 'Julio' }
 
   describe '#name' do
     it 'has a player name' do
