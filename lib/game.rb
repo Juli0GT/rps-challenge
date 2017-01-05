@@ -1,4 +1,5 @@
 class Game
+
   GAME_RULES = {
     rock: {rock: :draw, paper: :lose, scissors: :win},
     paper: {rock: :win, paper: :draw, scissors: :lose},
