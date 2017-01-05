@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'lib/game'
+require_relative 'lib/opponent'
 
 class RPS < Sinatra::Base
   enable :sessions
@@ -16,6 +17,12 @@ class RPS < Sinatra::Base
   get '/play' do
     @game = Game.new(session)
     erb :play
+  end
+
+  post '/play' do
+    session[:player_shape] = params[:shape].downcase.to_sym
+    session[:opponent_shape] = Opponent.new.shape
+    redirect '/play'
   end
 
 
